@@ -1,0 +1,32 @@
+
+<configuration>
+    <input>
+	<net-file value="SumoRoad.net.xml"/>
+	<route-files value="SumoRoute.rou.xml"/>
+        <gui-settings-file value="SumoGui.settings.xml"/>  
+     </input>
+
+
+   <output>
+	<collision.action value="warn"/>	
+	<output-prefix value="TIME"/>	
+	<fcd-output.signals value="true"/>
+	<fcd-output.distance value="true"/>
+	<fcd-output.acceleration value="true"/>
+	<fcd-output value="fcd-output.xml" />
+	<netstate-dump value="Dump.xml" />
+	<full-output value="Full-output.xml" />
+	<lanechange-output value="lanechange.xml"/> 
+	<lanechange-output.started value="true"/>
+	<lanechange-output.ended value="true"/>
+	<amitran-output  value="Trajectory-output.xml" />
+    </output>
+
+    <time>
+	<!-- <begin value="0"/>
+	<end value="35.1"/> -->
+	<step-length value=".1"/>
+    </time>
+
+
+</configuration>
