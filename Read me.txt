@@ -21,12 +21,11 @@
 2. In the abovementioned version the "perception errors" functionalities was not active for the CACC and ACC models, therefore, in order to inject fault
 into the "error state" parameter we added this functionality into the source code.
 
-3. SUMO related file such as ".net", ".config" and ".setting" files are exactly the same for all the experiments. However, there is a minor difference in the ".rou" file.
-These differences can be listed as below;
+3. SUMO related file such as ".net", ".config" and ".setting" files are exactly the same for all the experiments. However, there is a minor differences in the ".rou" files for different experiments. These differences can be listed as below;
 
-	- For "reaction time", "error state" and "chain-of-faults" experiments: In order to inject perception errors (reaction time and error state parameters) into the car,
+	- For "reaction time", "error state" and "chain-of-faults" experiments: In order to inject perception errors (reaction time and error state parameters) into the vehicle,
 	  we need to activate that functionality in the target vehicles (here they are ego-vahicle and follower-vehicle). Therefore, in the route file for the ego and follower vehicles (car 5 and 6)
-	  we activate the "driverstate" and introduce a minor "initialaeareness" value. The rest of the features are exactly the same for all experiments.
+	  we activate the "driverstate" and introduce a small "initialaeareness" value. The rest of the features are exactly the same for all experiments.
 
 	- For "error state" parameter when we disregard the cooperativeness of the ego-vehicle we set it to zero (lcCooperative="0.0") in the route file.
 
