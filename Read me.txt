@@ -30,6 +30,6 @@ These differences can be listed as below;
 
 	- For "error state" parameter when we disregard the cooperativeness of the ego-vehicle we set it to zero (lcCooperative="0.0") in the route file.
 
-4...
+4..
 
  
