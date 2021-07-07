@@ -1,5 +1,4 @@
 #                                **SUFI (SUmo-based Fault Injector)**
-
 &nbsp;
 &nbsp;
 &nbsp;
