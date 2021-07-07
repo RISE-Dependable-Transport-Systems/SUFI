@@ -1,4 +1,4 @@
-#                                **SUFI (SUmo-based Fault Injector**
+#                                **SUFI (SUmo-based Fault Injector)**
 
 ## Simulation Setup
 
