@@ -1,4 +1,4 @@
-#                                 SUFI
+#                                ** SUFI  **
 
 ## Simulation Setup
 
