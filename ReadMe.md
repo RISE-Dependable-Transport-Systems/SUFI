@@ -2,3 +2,4 @@
 
 ## Simulation Setup
 
+![alt text](\Documents\Fault and Attack\SUFI\SUFI.png")
