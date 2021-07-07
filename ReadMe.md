@@ -1,5 +1,5 @@
 #                                **SUFI (SUmo-based Fault Injector)**
 
-## Simulation Setupp
+## Simulation Setup
 
-![alt text]("\Documents\Fault and Attack\SUFI\SUFI.png")
+![alt text](SUFI.png)
