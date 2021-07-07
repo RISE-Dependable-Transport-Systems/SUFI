@@ -13,6 +13,6 @@ SUFI is a sumo-based fault injector tool. The tool consists of [SUMO](https://ww
 
 ## Simulation Setup
 
-Install SUMO 1.6.0 (we used this version of SUMO so please note that for later versions the car behavior might change)
-install Python 3.7 or later
+*Install SUMO 1.6.0 (we used this version of SUMO so please note that for later versions the car behavior might change)
+*Install Python 3.7 or later
 
