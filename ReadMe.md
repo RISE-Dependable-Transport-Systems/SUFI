@@ -17,9 +17,10 @@ SUFI is a sumo-based fault injector tool. The tool combines [SUMO](https://www.e
 * Install Python 3.7 or later
 
 #### Required Python libraries:
+* sumolib
+* traci
 * pandas
 * numpy
-* re
 * matplotlib
 
 ## IMPORTANT NOTES
