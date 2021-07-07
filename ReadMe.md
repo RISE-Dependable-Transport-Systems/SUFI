@@ -2,7 +2,7 @@
 
 <br/> 
 <br/> 
-
+SUFI is a [sumo](https://www.eclipse.org/sumo/)-based fault injector tool. It uses sumo for mobility simulation, where the traffic scenario and vehicle features are defined there.
 ## Simulation Setup
 
 ![SUFI](SUFI.png "Title")
