@@ -1,5 +1,6 @@
 <p align="center">
 #                                **SUFI (SUmo-based Fault Injector)**
+  </p>
 <br/> 
 <br/> 
 
@@ -8,4 +9,4 @@
 ## Simulation Setup
 
 ![SUFI](SUFI.png "Title")
-</p>
+
