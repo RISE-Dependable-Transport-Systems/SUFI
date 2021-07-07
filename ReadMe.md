@@ -1,5 +1,5 @@
 
-**<div align="center">SUFI (SUmo-based Fault Injector)</div>**
+#**SUFI (SUmo-based Fault Injector)**
 
 <br/> 
 <br/> 
