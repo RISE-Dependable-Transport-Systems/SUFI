@@ -2,4 +2,4 @@
 
 ## Simulation Setup
 
-![alt text](SUFI.png)
+![SUFI](SUFI.png)
