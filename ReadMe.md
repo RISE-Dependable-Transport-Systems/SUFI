@@ -23,6 +23,6 @@ SUFI is a sumo-based fault injector tool. The tool combines [SUMO](https://www.e
 - matplotlib
 
 ## IMPORTANT NOTES
-1. Before running the experiment make sure that the ".net", ".rou", ".settings", and ".config.sumocfg" files are in the same directory. Also creat two folders with names "output" and "outputG" so some of the output data will be stored in these folders.
+1. Before running the experiment make sure that the ".net", ".rou", ".settings", and ".config.sumocfg" files are in the same directory with the Python run file. Also create two folders with names "output" and "outputG" so some of the output data will be stored in these folders.
 
 2. mmm
