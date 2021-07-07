@@ -2,4 +2,4 @@
 
 ## Simulation Setup
 
-![SUFI](../GitHub/SUFI.PNG)
+![SUFI](SUFI.png "Title")
