@@ -1,5 +1,5 @@
 #                                **SUFI (SUmo-based Fault Injector)**
-![Car Image](sufi.png)
+![Car Image](SUFI.png)
 ## Simulation Setup
 
 ![SUFI](SUFI.png "Title")
