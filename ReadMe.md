@@ -3,8 +3,6 @@
 <br/> 
 <br/> 
 
-
-
 ## Simulation Setup
 
 ![SUFI](SUFI.png "Title")
