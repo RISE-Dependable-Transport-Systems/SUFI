@@ -25,7 +25,7 @@ SUFI is a sumo-based fault injector tool. The tool combines [SUMO](https://www.e
 
 ## Run Experiment
 After downolading the repository, open one of the example folders and run the Python-run file. <br/> 
-For example in folder: "SUFI/Examples/1. LC-Assertive Parameter"    run    "run_(stuck-at-value)_semi-permanent.py"
+For example in folder: **"SUFI/Examples/1. LC-Assertive Parameter"**    run    **"run_(stuck-at-value)_semi-permanent.py"**
 
 ## IMPORTANT NOTES!
 1. Before running the experiment make sure that the ".net", ".rou", ".settings", and ".sumocfg" files are in the same directory with the Python run file. Also create two folders with names "output" and "outputG" so some of the output data will be stored in these folders.
