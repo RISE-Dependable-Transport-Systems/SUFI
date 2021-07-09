@@ -1,5 +1,4 @@
-#************************************************ Code Number 1 ********************************************************
-#==========================================Bit Flip - TRANSIENT===============================================
+#==========================================Single Bit-Flip - Transient - lcOvertakeRight==================================
 import os
 import sys
 import optparse
@@ -77,7 +76,7 @@ for j in numpy.arange(11.0, 21.00, 0.5): # Loop for fault injection TIME interva
     for i in range(0, 64, 1): # Loop to define how many times to do bit-flip ===========================================
         jj.append(jjj)
         print("\n\n", "Iteration Number = ", jjj, "_", i)
-        kk += 1  #counts the step of experiment
+        kk += 1  #counts the step of the experiment
         kkk += 1
         print("Ex ID = ", kkk)
         Number.append(kk)
@@ -105,7 +104,7 @@ for j in numpy.arange(11.0, 21.00, 0.5): # Loop for fault injection TIME interva
         #print("default = ", vb)
         v = float2bin(vb)    # converts float to Binary format
         #print("binary format of default= ", v)
-        vv = list(v) # converts the Binary to a list of strings
+        vv = list(v) # converts the Binary value to a list of strings
         #print("random num = ", i)
         if int(v[i]) == 1:
             vv[i] = '0'
@@ -116,7 +115,7 @@ for j in numpy.arange(11.0, 21.00, 0.5): # Loop for fault injection TIME interva
         vvv = "".join(vv) # makes a list
         value =bin2float(vvv)# original
         print("value= ", value)
-        if value == math.inf:   # if the value be infinity it consider as "Default" since sumo not accept inf
+        if value == math.inf:  # If the selected value be infinity, it considers it as 99e+1000 since sumo does not accept infinity
             infinityNum+=1
             value=float(default_value[0])
             state_list.append("detected")
@@ -161,7 +160,7 @@ for j in numpy.arange(11.0, 21.00, 0.5): # Loop for fault injection TIME interva
             else:
                 sumoBinary = checkBinary('sumo-gui')
 
-            # traci starts sumo as aa subprocess and then this script connects and runs==AND OUTPUT DEFINITION =========
+            # traci starts sumo as a subprocess and then this script connects and runs == also we define OUTPUT files to log ========
             traci.start(["sumo", "-c", "SumoRun.config.sumocfg",
                          "--tripinfo-output","output/--ID ={: }  t ={:.2f}  lc ={:.2f} tripinfo.xml".format(kkk, jjj, k),
                          "--fcd-output", "output/--ID ={: }  t ={:.2f}  lc ={:.2f} fcd.xml".format(kkk, jjj, k),
@@ -184,7 +183,7 @@ df = pd.DataFrame(
                 'state of execution': state_list
                 }
         )
-# Extracting the current Time ==========================================================================================
+#Current Time ==========================================================================================
 now = datetime.now()
 current_time = now.strftime("%Y-%m-%d %H.%M.%S")
 df.to_csv("Experiment_Info_{}.csv".format(current_time))

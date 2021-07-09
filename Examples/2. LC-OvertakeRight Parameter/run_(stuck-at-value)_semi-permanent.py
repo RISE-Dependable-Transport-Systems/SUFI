@@ -1,5 +1,4 @@
-#************************************************ Code Number 1 ********************************************************
-#================================CHANGE OF VALUE - INTERMITTENT - lcOvertakeRight=======================================
+#================================Stuck-at-value- Semi-permanent - lcOvertakeRight=======================================
 import os
 import sys
 import optparse
@@ -26,7 +25,7 @@ for j in numpy.arange(11.0, 21.0, 0.5): # Loop for fault injection TIME interval
     jjj= round(j, 3)
     kk = 0
     OtR = 0  #OvertakeRight value
-    for i in range(100): # Loop to define how many times to pick random value ===========================================
+    for i in range(100): # Loop to define how many times to select a random value ===========================================
         jj.append(jjj)
         print("\n\n", "Iteration Number = ", jjj, "_", i)
         kk += 1  #counts the step of experiment
@@ -41,7 +40,7 @@ for j in numpy.arange(11.0, 21.0, 0.5): # Loop for fault injection TIME interval
             options, args = opt_parser.parse_args()
             return options
 
-        OtR += 0.01# Value for target faulty parameter===================================
+        OtR += 0.01# Value for the target faulty parameter===================================
         value = round(OtR, 3)
         valueL.append(value)
         print("LC-OvertakeRight = ", value, "\n ==========================================================================")
@@ -70,7 +69,7 @@ for j in numpy.arange(11.0, 21.0, 0.5): # Loop for fault injection TIME interval
             else:
                 sumoBinary = checkBinary('sumo-gui')
 
-            # traci starts sumo as aa subprocess and then this script connects and runs==AND OUTPUT DEFINITION =========
+            # traci starts sumo as a subprocess and then this script connects and runs == also we define OUTPUT files to log ====
             traci.start(["sumo", "-c", "SumoRun.config.sumocfg",
                          "--tripinfo-output","output/--ID ={: }  t ={:.2f}  lc ={:.2f} tripinfo.xml".format(kkk, jjj, k),
                          "--fcd-output", "output/--ID ={: }  t ={:.2f}  lc ={:.2f} fcd.xml".format(kkk, jjj, k),
@@ -91,7 +90,7 @@ df = pd.DataFrame(
                 'value (lcOvertakeRight)': valueL
                 }
         )
-# Extracting the current Time ==========================================================================================
+# Current Time ==========================================================================================
 now = datetime.now()
 current_time = now.strftime("%Y-%m-%d %H.%M.%S")
 df.to_csv("table_{}.csv".format(current_time))

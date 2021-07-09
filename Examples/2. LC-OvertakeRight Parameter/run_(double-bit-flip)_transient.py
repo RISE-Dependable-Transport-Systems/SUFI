@@ -1,5 +1,4 @@
-#************************************************ Code Number 5 ********************************************************
-#==========================================Multi Bit Flip - TRANSIENT - lcOvertakeRight==================================
+#==========================================Double Bit-Flip - Transient - lcOvertakeRight==================================
 import os
 import sys
 import optparse
@@ -63,7 +62,7 @@ if __name__ == "__main__":
     run()
 
 
-# ==================================Functions to choose random bits and check for repetablity===========================
+# ==================================Functions to select random bits and check for repetitiveness===========================
 def randomnumbers():  # 2 random number picker function
     numbers = random.sample(range(64), 2)
     return numbers
@@ -99,7 +98,7 @@ for j in numpy.arange(11.0, 21.0, 0.5): # Loop for fault injection TIME interval
     jjj= round(j, 3)
     kk = 0
     randomList = []
-    for i in range(0, 100, 1):  # in choosing number be careful bc the entire possibility is "(total - (repettive numbers like 11 22)) / 2
+    for i in range(0, 100, 1):  # When you select a number, note that the overall probablity is:"((64*64 - (repetitive numbers like 11 22)) / 2)
         XX = randomnumbers()
         if XX not in randomList:
             randomList.append(XX)
@@ -137,7 +136,7 @@ for j in numpy.arange(11.0, 21.0, 0.5): # Loop for fault injection TIME interval
         print("binaryAfterBitFlip = ", vvv)
         value =bin2float(vvv)# original
         print("value= ", value)
-        if abs(value) == math.inf or str(value) =='nan':   # if the value be infinity it consider as 99e+1000 since sumo not accept inf
+        if abs(value) == math.inf or str(value) =='nan': # If the selected value be infinity, it considers it as 99e+1000 since sumo does not accept inf
             infinityNum+=1
             value=float(default_value[0])
             state_list.append("crash")
@@ -182,7 +181,7 @@ for j in numpy.arange(11.0, 21.0, 0.5): # Loop for fault injection TIME interval
             else:
                 sumoBinary = checkBinary('sumo-gui')
 
-            # traci starts sumo as aa subprocess and then this script connects and runs==AND OUTPUT DEFINITION =========
+            # traci starts sumo as a subprocess and then this script connects and runs == also we define OUTPUT files to log ========
             traci.start(["sumo", "-c", "SumoRun.config.sumocfg",
                          "--tripinfo-output","output/--ID ={: }  t ={:.2f} tripinfo.xml".format(kkk, jjj),
                          "--fcd-output", "output/--ID ={: }  t ={:.2f} fcd.xml".format(kkk, jjj),
@@ -207,7 +206,7 @@ df = pd.DataFrame(
                 'state of execution': state_list
                 }
         )
-# Extracting the current Time ==========================================================================================
+# Current Time ==========================================================================================
 now = datetime.now()
 current_time = now.strftime("%Y-%m-%d %H.%M.%S")
 df.to_csv("Experiment_Info_{}.csv".format(current_time))

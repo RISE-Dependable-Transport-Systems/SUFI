@@ -1,5 +1,4 @@
-#************************************************ Code Number 1 ********************************************************
-#==========================================CHANGE OF VALUE - INTERMITTENT===============================================
+#================================Stuck-at-value- Semi-permanent - Error State=======================================
 import os
 import sys
 import optparse
@@ -76,7 +75,7 @@ for j in numpy.arange(11.0, 21.0, 0.5): # Loop for fault injection TIME interval
             else:
                 sumoBinary = checkBinary('sumo-gui')
 
-            # traci starts sumo as aa subprocess and then this script connects and runs==AND OUTPUT DEFINITION =========
+            # traci starts sumo as a subprocess and then this script connects and runs == also we define OUTPUT files to log ======
             traci.start(["sumo", "-c", "SumoRun.config.sumocfg",
                          "--fcd-output", "output/--ID ={: }  t ={:.2f}  es ={:.2f} fcd.xml".format(kkk, jjj, k),
                          "--error-log", "output/--D ={: }  t ={:.2f}  noise ={:.2f} Error.xml".format(kkk, jjj, k)
@@ -92,7 +91,7 @@ df = pd.DataFrame(
                 'value (Error State)': valueL
                 }
         )
-# Extracting the current Time ==========================================================================================
+#Current Time ==========================================================================================
 now = datetime.now()
 current_time = now.strftime("%Y-%m-%d %H.%M.%S")
 df.to_csv("table_{}.csv".format(current_time))

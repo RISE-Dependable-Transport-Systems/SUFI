@@ -1,5 +1,4 @@
-#************************************************ Code Number 1 ********************************************************
-#=======================Chain of Faults CHANGE OF VALUE - INTERMITTENT - lcAssertive+ReactionTime=======================
+#==================Chain-of-faults(stuck-at-value)- Semi-permanent - LC-Assertive+ReactioTime=========================== Ego+Follower vehicles
 import os
 import sys
 import optparse
@@ -28,9 +27,9 @@ for j in numpy.arange(11.0, 14.5, 0.5): # Loop for fault injection TIME interval
     jjj= round(j, 3)
     kk = 0
     for i in range(100): # Loop to define how many times to pick random value ==========================================
-        value = random.randrange(2, 1001)  # Random number for target faulty parameter==================================
+        value = random.randrange(2, 1001)  # Random number for the target faulty parameter==================================
         hh = 0
-        for h in numpy.arange(0.2, 5.1, 0.2): # Define interval for Reaction Time parameter
+        for h in numpy.arange(0.2, 5.1, 0.2): # Define interval for the Reaction Time parameter
             RT = round(h, 3)
             value_RT.append(RT)
             jj.append(jjj)
@@ -80,7 +79,7 @@ for j in numpy.arange(11.0, 14.5, 0.5): # Loop for fault injection TIME interval
                 else:
                     sumoBinary = checkBinary('sumo-gui')
 
-                # traci starts sumo as aa subprocess and then this script connects and runs==AND OUTPUT DEFINITION =====
+                # traci starts sumo as a subprocess and then this script connects and runs == also we define OUTPUT files to log =========
                 traci.start(["sumo", "-c", "SumoRun.config.sumocfg",
                              "--tripinfo-output","output/--ID ={: }  t ={:.2f}  lc ={:.2f} RT ={:.2f} tripinfo.xml".format(kkk, jjj, k, RT),
                              "--fcd-output", "output/--ID ={: }  t ={:.2f}  lc ={:.2f} RT ={:.2f} fcd.xml".format(kkk, jjj, k, RT),
@@ -103,7 +102,7 @@ df = pd.DataFrame(
                 'value (Reaction Time)': value_RT
                 }
         )
-# Extracting the current Time ==========================================================================================
+#Current Time ==========================================================================================
 now = datetime.now()
 current_time = now.strftime("%Y-%m-%d %H.%M.%S")
 df.to_csv("table_{}.csv".format(current_time))

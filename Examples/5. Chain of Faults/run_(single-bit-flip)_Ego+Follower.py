@@ -1,5 +1,4 @@
-#************************************************ Code Number 1 ********************************************************
-#==========================================Bit Flip - INTERMITTENT===============================================
+#==================Chain-of-faults(single-bi-flip)- Semi-permanent - LC-Assertive+ReactioTime===========================Ego+Follower vehicles
 import os
 import sys
 import optparse
@@ -77,7 +76,7 @@ for j in numpy.arange(11.0, 14.50, 0.5): # Loop for fault injection TIME interva
     jjj= round(j, 3)
     kk = 0
     for i in range(0, 64, 1): # Loop to define how many times to do bit-flip ===========================================
-        #=================== Convert float to binary and reverse =======================================================
+        #=================== Convert float to binary and vice versa =======================================================
         def bin2float(b):
             ''' Convert binary string to a float.
 
@@ -100,7 +99,7 @@ for j in numpy.arange(11.0, 14.50, 0.5): # Loop for fault injection TIME interva
         #print("default = ", vb)
         v = float2bin(vb)    # converts float to Binary format
         #print("binary format of default= ", v)
-        vv = list(v) # converts the Binary to a list of strings
+        vv = list(v) # converts the Binary value to a list of strings
         #print("random num = ", i)
         if int(v[i]) == 1:
             vv[i] = '0'
@@ -112,7 +111,7 @@ for j in numpy.arange(11.0, 14.50, 0.5): # Loop for fault injection TIME interva
         value =bin2float(vvv)# original
         hh=0
 #========================================Second fault==================================================
-        for h in numpy.arange(0.2, 5.1, 0.2): # Define interval for Reaction Time parameter
+        for h in numpy.arange(0.2, 5.1, 0.2): # Defines interval for the Reaction Time parameter
             RT = round(h, 3)
             value_RT.append(RT)
             jj.append(jjj)
@@ -121,7 +120,7 @@ for j in numpy.arange(11.0, 14.50, 0.5): # Loop for fault injection TIME interva
             kkk += 1
             hh += 1
             print("value= ", value)
-            if value == math.inf:  # if the value be infinity it consider as "Default" since sumo not accept inf
+            if value == math.inf:  # if the selected value be infinity it injects the "Default" value,since sumo not accept inf
                 infinityNum += 1
                 value = float(default_value[0])
                 state_list.append("detected")
@@ -150,8 +149,7 @@ for j in numpy.arange(11.0, 14.50, 0.5): # Loop for fault injection TIME interva
 
                     if step == round(j, 3) *10:
                         traci.vehicle.setParameter('5', "laneChangeModel.lcAssertive", str(value))
-                        traci.vehicle.setParameter('5', 'device.driverstate.maximalReactionTime', str(RT))
-                        traci.vehicle.setS
+                        traci.vehicle.setParameter('6', 'device.driverstate.maximalReactionTime', str(RT))
                     if step == (round(j, 3) * 10) + 3:
                         xc = traci.vehicle.getParameter('5', "laneChangeModel.lcAssertive")
                         sumo_retrieve.append(xc)
@@ -172,7 +170,7 @@ for j in numpy.arange(11.0, 14.50, 0.5): # Loop for fault injection TIME interva
                 else:
                     sumoBinary = checkBinary('sumo-gui')
 
-                # traci starts sumo as aa subprocess and then this script connects and runs==AND OUTPUT DEFINITION =========
+                # traci starts sumo as a subprocess and then this script connects and runs == also we define OUTPUT files to log =========
                 traci.start(["sumo", "-c", "SumoRun.config.sumocfg",
                              "--tripinfo-output","output/--ID ={: }  t ={:.2f}  lc ={:.2f} tripinfo.xml".format(kkk, jjj, k),
                              "--fcd-output", "output/--ID ={: }  t ={:.2f}  lc ={:.2f} fcd.xml".format(kkk, jjj, k),
@@ -197,7 +195,7 @@ df = pd.DataFrame(
                 'state of execution': state_list
                 }
         )
-# Extracting the current Time ==========================================================================================
+#Current Time ==========================================================================================
 now = datetime.now()
 current_time = now.strftime("%Y-%m-%d %H.%M.%S")
 df.to_csv("Experiment_Info_{}.csv".format(current_time))

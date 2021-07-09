@@ -1,5 +1,4 @@
-#************************************************ Code Number 1 ********************************************************
-#==========================================CHANGE OF VALUE - INTERMITTENT===============================================
+#==========================================Stuck-at-value - Semi-permanent===============================================
 import os
 import sys
 import optparse
@@ -25,10 +24,10 @@ kkk = 0 # Number of experiment (ID)
 for j in numpy.arange(11.0, 21.0, 0.5): # Loop for fault injection TIME interval =======================================
     jjj= round(j, 3)
     kk = 0
-    for i in range(100): # Loop to define how many times to pick random value ===========================================
+    for i in range(100): # Loop to define how many times to select a random value ===========================================
         jj.append(jjj)
         print("\n\n", "Iteration Number = ", jjj, "_", i)
-        kk += 1  #counts the step of experiment
+        kk += 1  #counts the step of the experiment
         kkk += 1
         print("Ex ID = ", kkk)
         Number.append(kk)
@@ -68,7 +67,7 @@ for j in numpy.arange(11.0, 21.0, 0.5): # Loop for fault injection TIME interval
             else:
                 sumoBinary = checkBinary('sumo-gui')
 
-            # traci starts sumo as aa subprocess and then this script connects and runs==AND OUTPUT DEFINITION =========
+            # traci starts sumo as a subprocess and then this script connects and runs == also we define OUTPUT files to log =======
             traci.start(["sumo", "-c", "SumoRun.config.sumocfg",
                          "--tripinfo-output","output/--ID ={: }  t ={:.2f}  lc ={:.2f} tripinfo.xml".format(kkk, jjj, k),
                          "--fcd-output", "output/--ID ={: }  t ={:.2f}  lc ={:.2f} fcd.xml".format(kkk, jjj, k),
@@ -89,7 +88,7 @@ df = pd.DataFrame(
                 'value (lcAssertive)': valueL
                 }
         )
-# Extracting the current Time ==========================================================================================
+#Current Time ==========================================================================================
 now = datetime.now()
 current_time = now.strftime("%Y-%m-%d %H.%M.%S")
 df.to_csv("table_{}.csv".format(current_time))
