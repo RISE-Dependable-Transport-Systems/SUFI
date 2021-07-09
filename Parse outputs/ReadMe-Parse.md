@@ -4,7 +4,7 @@
 
 
 Note that these parsing scripts are written to parse the outputs of the **LC-Assertive parameter - stuck-at-value fault model**,
-therefore, if you want to use these to other parameters and fault models you may need to change the **"row"** numbers 
+therefore, if you want to use them to other parameters and fault models you may need to change the **"row"** numbers 
 when it extracts data from **csv** file.
 
 
