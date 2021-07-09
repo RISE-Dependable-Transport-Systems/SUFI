@@ -120,7 +120,7 @@ for j in numpy.arange(11.0, 14.50, 0.5): # Loop for fault injection TIME interva
             kkk += 1
             hh += 1
             print("value= ", value)
-            if value == math.inf:  # if the selected value be infinity it injects the "Default" value,since sumo not accept inf
+            if value == math.inf:  # if the selected value be infinity it injects the "Default" value, since sumo does not accept inf
                 infinityNum += 1
                 value = float(default_value[0])
                 state_list.append("detected")
