@@ -23,7 +23,7 @@ SUFI is a sumo-based fault injector tool. The tool combines [SUMO](https://www.e
 * numpy
 * matplotlib
 
-## Run Experiment
+## Run Experiments
 After downolading the repository, open one of the example folders and run the Python-run file. <br/> 
 For example in folder: **"SUFI/Examples/1. LC-Assertive Parameter"**    run    **"run_(stuck-at-value)_semi-permanent.py"**
 
