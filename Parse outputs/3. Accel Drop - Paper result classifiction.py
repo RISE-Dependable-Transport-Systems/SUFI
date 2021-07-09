@@ -13,7 +13,7 @@ root = ET.parse('outputG/2020-09-27-16-18-32fcd-output.xml').getroot()  # Golden
 DecelList = {} # Dictionary to create a lists
 for j in range(1, 11, 1): # Creates 10 lists
     DecelList[j] = []
-for X in root.findall('timestep'):  # Inside xml file goes to(timestep-> vehicle)then whatever I want I pick from there
+for X in root.findall('timestep'): #Inside xml file goes to (timestep-> vehicle); allows to pick up whatever I want from there
     timee = float(X.get("time"))
     if timee >= 11.00:
         for B in X.findall('vehicle'):
@@ -63,7 +63,7 @@ for row in readCSV:
         Effective.append(1)
         DecelTotal.append(abs(min(DecelEx)))
         CarNumber.append(CarEx[DecelEx.index(min(DecelEx))])
-        ID.append(row[1])  # Adds the number of experiment to list
+        ID.append(row[1])  # Adds the number of experiment to the list
         Time.append(row[2])
         value_list.append(float(row[3]))
 
@@ -85,12 +85,12 @@ print("DecelTotal = ", DecelTotal)
 print("car numbers: ", CarNumber)
 '''
 #===============================================================================================================
-#  seperating catastrophic and benign
+#  seperating catastrophic and benign cases
 catas_list=[]
 benign_list=[]
 negligible_list=[]
 print("lenght list= ", len(DecelTotal))
-for i in range (0, len(DecelTotal)):  # here the index (i) of them recorded by separating to different groups
+for i in range (0, len(DecelTotal)):  # here the index (i) of them is recorded by separating to different groups
     if DecelTotal[i] <= 0.78:
         negligible_list.append(i)
     elif DecelTotal[i] <= 5.0 and DecelTotal[i] > 0.78:

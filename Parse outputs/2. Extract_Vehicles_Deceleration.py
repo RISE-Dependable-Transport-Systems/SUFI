@@ -5,7 +5,7 @@ import csv
 from datetime import datetime, date, time
 import pandas as pd
 
-file_list = glob.glob("output/*fcd.xml*") #Reads all xml file with the end name of fcd.xml and makes a list of their name
+file_list = glob.glob("output/*fcd.xml*") #Reads all the xml files with extension of fcd.xml and makes a list of their names
 print(len(file_list))
 
 # Lists to record vehicles deceleration separately =====================================================================
@@ -36,7 +36,7 @@ for file in file_list:
     DecelList_8 = []
     DecelList_9 = []
     DecelList_10 = []
-    for X in root.findall('timestep'):#Inside xml file goes to(timestep-> vehicle)then whatever I want I pick from there
+    for X in root.findall('timestep'):#Inside xml file goes to (timestep-> vehicle); allows to pick up whatever I want from there
         timee = float(X.get("time"))
 #        if timee>=11.00:
         for B in X.findall('vehicle'):
@@ -114,7 +114,7 @@ df_7 = pd.DataFrame(
                 }
         )
 
-now = datetime.now() # Current time extraction =========================================================================
+now = datetime.now() # Current time =========================================================================
 current_time = now.strftime("%Y-%m-%d %H.%M.%S")
 df_7.to_csv("Parsed Deceleration_All Vehicles_{}.csv".format(current_time))
 
