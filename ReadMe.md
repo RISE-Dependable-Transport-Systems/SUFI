@@ -24,7 +24,7 @@ SUFI is a sumo-based fault injector tool. The tool combines [SUMO](https://www.e
 * matplotlib
 
 ## Run Experiment
-After downolading the repository, open one of the example folders and run Python-run file.
+After downolading the repository, open one of the example folders and run the Python-run file. <br/> 
 Ex: 
 
 ## IMPORTANT NOTES!
