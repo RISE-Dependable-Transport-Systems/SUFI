@@ -13,7 +13,7 @@ The example of the code is given as below:
 
 
 =========================Related piece of the code=====================================
-
+```
 f = open('table_2020-09-27 14.53.21.csv', 'r')  #This csv file created when you run the experiment
 readCSV = csv.reader(f)
 Time = []
@@ -22,3 +22,4 @@ next(readCSV)
 for row in readCSV:
     Time.append(row[2])         #The row number may change for different experiment run
     value.append(int(row[4]))   #The row number may change for different experiment run
+```
