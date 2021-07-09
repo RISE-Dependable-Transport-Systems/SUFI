@@ -40,7 +40,7 @@ DecelTotal = []
 CarNumber = []
 next(readCSV)
 for row in readCSV:
-# ===================Reads the Deceleration data for all vehicles in faulty experiments ===============================
+# ===================Reads the Deceleration data for the all vehicles in the faulty experiments ===============================
     nonEffectiveEx = [] # Non-effective in each experiment
     EffectiveEx = [] # Effective in each experiment
     DecelEx = []  # Deceleration in each experiment
@@ -85,7 +85,7 @@ print("DecelTotal = ", DecelTotal)
 print("car numbers: ", CarNumber)
 '''
 #===============================================================================================================
-#  seperating catastrophic and benign cases
+#  separating catastrophic and benign cases
 catas_list=[]
 benign_list=[]
 negligible_list=[]
