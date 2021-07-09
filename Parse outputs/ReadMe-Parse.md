@@ -9,7 +9,7 @@ when it extracts data from csv file.
 
 
 
-The example of the code is given below:
+The example of the code is given as below:
 
 
 =========================Related piece of the code=====================================
