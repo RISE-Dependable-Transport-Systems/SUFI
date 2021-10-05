@@ -32,3 +32,5 @@ For example in folder: **"SUFI/Examples/1. LC-Assertive Parameter"**    run    *
 
 2. In the abovementioned version (SUMO 1.6.0) the "perception errors" functionality was not active for the CACC and ACC models, therefore, in order to inject fault
 into the "error state" parameter we added this functionality into the source code. But for the later versions we requested the SUMO team to add this funtionality so you might do not need to do that.
+
+## License 
