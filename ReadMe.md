@@ -34,3 +34,4 @@ For example in folder: **"SUFI/Examples/1. LC-Assertive Parameter"**    run    *
 into the "error state" parameter we added this functionality into the source code. But for the later versions we requested the SUMO team to add this funtionality so you might do not need to do that.
 
 ## License 
+SUFI is an open source fault injector tool, the tool is free: (This program is free software: )you can redistribute it and/or modify it under the terms of the [GNU General Public License] (https://www.gnu.org/licenses/gpl-3.0.en.html) as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
