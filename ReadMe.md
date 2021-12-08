@@ -40,4 +40,4 @@ SUFI is an open source fault injector tool, the tool is free: you can redistribu
 ## Publications about SUFI
 
 * [IEEE-DSN](https://ieeexplore.ieee.org/document/9525530)
-* IEEE-EDCC
+* [IEEE-EDCC](https://ieeexplore.ieee.org/document/9603599)
