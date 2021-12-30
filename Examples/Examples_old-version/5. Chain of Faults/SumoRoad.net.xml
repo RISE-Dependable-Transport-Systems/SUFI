@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 09/23/20 23:37:08 by Eclipse SUMO netedit Version v1_6_0+1732-1c128d76e0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="E:\Fault-Attack%20Injection\SUMO_Fault_Injection\SUMO_LC.Assertive\4.%20Ex_multi%20lane%20-%20run%201000times\sept22\Dual_way.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="E:\Fault-Attack%20Injection\SUMO_Fault_Injection\SUMO_LC.Assertive\4.%20Ex_multi%20lane%20-%20run%201000times\sept22\Dual_way.net.xml"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-internal-links value="true"/>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.5"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
+
+    <report>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<net version="1.6" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,0.00" convBoundary="-0.00,99.75,1000.02,101.46" origBoundary="-10000000000.00,-10000000000.00,10000000000.00,10000000000.00" projParameter="!"/>
+
+    <edge id="E11" from="gneJ11" to="gneJ13" priority="-1" spreadType="center">
+        <lane id="E11_0" index="0" speed="36.00" length="750.11" shape="0.00,96.55 750.11,97.83"/>
+        <lane id="E11_1" index="1" speed="36.00" length="750.11" shape="-0.00,99.75 750.11,101.03"/>
+        <lane id="E11_2" index="2" speed="36.00" length="750.11" shape="-0.01,102.95 750.10,104.23"/>
+    </edge>
+
+    <junction id="gneJ11" type="dead_end" x="-0.00" y="99.75" incLanes="" intLanes="" shape="-0.01,104.55 0.00,94.95"/>
+    <junction id="gneJ12" type="dead_end" x="1000.02" y="101.46" incLanes="" intLanes="" shape="1000.02,101.46"/>
+    <junction id="gneJ13" type="dead_end" x="750.11" y="101.03" incLanes="E11_0 E11_1 E11_2" intLanes="" shape="750.12,96.23 750.10,105.83"/>
+
+</net>
