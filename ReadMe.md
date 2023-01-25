@@ -28,7 +28,7 @@ After downolading the repository, open one of the example folders and run the Py
 For example in folder: **"SUFI/Examples/1. LC-Assertive Parameter"**    run    **"run_(stuck-at-value)_semi-permanent.py"**
 
 ## IMPORTANT NOTES!
-1. Before running the experiment make sure that the ".net", ".rou", ".settings", and ".sumocfg" files are in the same directory with the Python run file. Also create two folders with names "output" and "outputG" so some of the output data will be stored in these folders.
+1. Before running an experiment make sure that the ".net", ".rou", ".settings", and ".sumocfg" files are in the same directory with the Python run file. Also create two folders with names "output" and "outputG" so some of the output data will be stored in these folders.
 
 2. In the abovementioned version (SUMO 1.6.0) the "perception errors" functionality was not active for the CACC and ACC models, therefore, in order to inject fault
 into the "error state" parameter we added this functionality into the source code. But for the later versions we requested the SUMO team to add this funtionality so you might do not need to do that.
